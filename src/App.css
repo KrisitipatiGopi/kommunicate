@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
+/* Common styles for both mobile and normal layouts */
+body {
+  font-family: Arial, sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h2 {
+  margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+input,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc; /* Add borders to input/select elements */
+}
+
+.error {
+  color: red;
+}
+
+/* Mobile Layout */
+@media (max-width: 768px) {
+  .App {
+    max-width: 100%;
+    padding: 20px;
+    border: solid 4px gray; 
+  }
+
+  button {
+    display: block;
+    width: 100%;
+    margin-top: 10px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Normal (Desktop) Layout */
+@media (min-width: 769px) {
+  .App {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 40px;
+    border: solid 4px gray;
+  }
+
+  button {
+    display: inline-block;
+    width: auto;
+    margin-right: 10px;
+  }
+}
+
+/* Step Indicators Styles */
+.step-indicators {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.step-indicator {
+  width: 30px;
+  height: 30px;
+  background-color: #ddd;
+  border: 2px solid #333;
+  border-radius: 50%;
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-weight: bold;
+  cursor: pointer;
+  margin-right: 10px; /* Add space between step indicators */
+}
+
+.step-indicator.active {
+  background-color: black;
   color: white;
+  border-color: white;
+  /* Highlight the active step indicator */
 }
 
-.App-link {
-  color: #61dafb;
+.button-container {
+  margin-top: 20px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button1{
+  background-color: antiquewhite;
+  border-radius: 3px;
+  padding: 5px;
+  font-weight: bold;
+}
+.button1:hover {
+  background-color: rgb(101, 100, 4);
+  border-radius: 3px;
+  padding: 5px;
+  font-weight: bold;
+}
+.button2{
+  background-color: rgb(47, 252, 255);
+  border-radius: 5px;
+  padding: 6px;
+  font-weight: bold;
+}
+.button2:hover{
+  background-color: pink;
+  border-radius: 5px;
+  padding: 6px;
+  font-weight: bold;
+}
+.message{
+  color: green;
+  font-size: 40px;
+}
+.final{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
